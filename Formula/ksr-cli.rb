@@ -5,10 +5,10 @@ class KsrCli < Formula
   
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/aywengo/ksr-cli/releases/download/v0.1.0/ksr-cli-darwin-amd64.tar.gz"
-    sha256 "e967a2ad2a60b07e96ea4accd7db4f087c19ae5cc01854de4f3c4f38df3b8a3f"
+    sha256 "e967a2ad2a60b07e96ea4accd7db4f087c19ae5cc01854de4f3c4f38df3b8a3f"  # This needs to be updated with actual checksum
   elsif OS.mac? && Hardware::CPU.arm?
     url "https://github.com/aywengo/ksr-cli/releases/download/v0.1.0/ksr-cli-darwin-arm64.tar.gz"
-    sha256 "56cbf85c9c3e6a5797e3cde60c825b09b4d09feb5f65bb09c4b96c7ae8d96c43"
+    sha256 "18b2f834a2192a65aaf5e59b4ae97080a09f5f25786bc1fcaef9cfbc35ccd07d"
   else
     odie "ksr-cli is only supported on macOS"
   end
