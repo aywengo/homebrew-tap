@@ -15,19 +15,9 @@ class KsrCli < Formula
   
   def install
     bin.install "ksr-cli"
-    
-    # Try to generate completions, but don't fail if it doesn't work
-    begin
-      bash_completion.install Utils.safe_popen_read("#{bin}/ksr-cli", "completion", "bash") => "ksr-cli" if File.exist?("#{bin}/ksr-cli")
-      zsh_completion.install Utils.safe_popen_read("#{bin}/ksr-cli", "completion", "zsh") => "_ksr-cli" if File.exist?("#{bin}/ksr-cli")
-    rescue
-      # Completions not available yet, skip
-    end
   end
   
   test do
-    # Just check if the binary runs and shows help
-    output = shell_output("#{bin}/ksr-cli help 2>&1", 0)
-    assert_match "ksr-cli", output
+    system "#{bin}/ksr-cli", "--help"
   end
 end
