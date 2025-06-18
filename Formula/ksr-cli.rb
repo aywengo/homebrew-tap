@@ -15,9 +15,13 @@ class KsrCli < Formula
   
   def install
     bin.install "ksr-cli"
+    # Create a symlink from ksr to ksr-cli
+    bin.install_symlink "ksr-cli" => "ksr"
   end
   
   test do
     system "#{bin}/ksr-cli", "--help"
+    # Also test the symlink
+    system "#{bin}/ksr", "--help"
   end
 end
