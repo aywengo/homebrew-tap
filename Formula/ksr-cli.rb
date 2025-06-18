@@ -1,14 +1,14 @@
 class KsrCli < Formula
   desc "CLI tool for Kafka Schema Registry"
   homepage "https://github.com/aywengo/ksr-cli"
-  version "0.2.2"
+  version "0.2.3"
   
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/aywengo/ksr-cli/releases/download/v0.2.2/ksr-cli-darwin-amd64.tar.gz"
-    sha256 "af461d9ea415c2b5d56146e8bfadd41bcdfedceaebbeb35dc815d1360502d993"
+    url "https://github.com/aywengo/ksr-cli/releases/download/v0.2.3/ksr-cli-darwin-amd64.tar.gz"
+    sha256 "673b6c63df7e38d9b81c305a24a7b851b2feaa2d3fc66caaae74ea6892d22ae1"
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/aywengo/ksr-cli/releases/download/v0.2.2/ksr-cli-darwin-arm64.tar.gz"
-    sha256 "ce922d3c36b3a60a34e6d8bbaef00d1691cc8fe5ae04388edb7935329af73667"
+    url "https://github.com/aywengo/ksr-cli/releases/download/v0.2.3/ksr-cli-darwin-arm64.tar.gz"
+    sha256 "833afa44167fe7d1577ade95728db0c1a89ec71aa70b1436b70575ced526f641"
   else
     odie "ksr-cli is only supported on macOS"
   end
